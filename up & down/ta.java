@@ -8,12 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ta extends World
 {
-
+    public int jeda=50;
     /**
      * Constructor for objects of class ta.
      * 
      */
-    private int jeda=0;
     public ta()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -21,11 +20,12 @@ public class ta extends World
     }
     public void act()
     {
-        if(jeda>0)jeda--;
-        else jeda=20;
-        if(jeda==1){
-            int py=Greenfoot.getRandomNumber (getHeight());
-            addObject (new papanj(-(Greenfoot.getRandomNumber (3))), getWidth()+200,py);
+        if(jeda==0){
+            addObject(new Papan(),getWidth()-3,getHeight());
+            jeda=60;
+        }
+        else{
+            jeda--;
         }
     }
 }

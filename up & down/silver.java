@@ -1,19 +1,29 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class silver here.
+ * Write a description of class Silver here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class silver extends Actor
+public class Silver extends Benda
 {
     /**
-     * Act - do whatever the silver wants to do. This method is called whenever
+     * Act - do whatever the Silver wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private int timer=0;
     public void act() 
     {
-        // Add your action code here.
+        setLocation(getX(),getY()+3);
+        silverFall();
     }    
+    
+    public void silverFall()
+    {
+        if (atWorldEdge())
+        {
+            getWorld().removeObject(this);
+        }
+    }
 }
