@@ -8,73 +8,75 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ball extends Benda
 {
-    private int speed = 7;
-    private int vSpeed = 0;
-    private int acceleration = 2;
-    private int jumpStrength = 12;
+    private int kecepatan = 7;
+    private int vKecepatan = 0;
+    private int akselerasi = 2;
+    private int lompatan = 12;
     /**
      * Act - do whatever the Ball wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        checkKeys();
-        checkFall();
-    }    
-    private void checkKeys()
-    {
-    if(Greenfoot.isKeyDown("left"))
-    {
-        setImage("ball-left.png");
-        moveLeft();
+        tombol();
+        cekJatuh();
     }
-    if(Greenfoot.isKeyDown("right"))
+    
+    private void tombol()
     {
-        setImage("ball-right.png");
-        moveRight();
+        if(Greenfoot.isKeyDown("left"))
+        {
+            setImage("ball-left.png");
+            gerakKiri();
+        }
+        if(Greenfoot.isKeyDown("right"))
+        {
+            setImage("ball-right.png");
+            gerakKanan();
+        }
+        if (Greenfoot.isKeyDown("space"))
+        {
+            loncat();  
+        }
     }
-    if (Greenfoot.isKeyDown("space"))
+
+    public Void loncat()
     {
-      jump();  
+        vKecepatan = -lompatan;
+        jatuh();
     }
-}
 
-public Void jump()
-{
-    vSpeed =-jumpStrength;
-    fall();
-}
-
-public void checkFall()
-{
-    if(onpapan())
+    public void cekJatuh()
     {
-        vSpeed = 0;
+        if(dipapan())
+        {
+            vKecepatan = 0;
+        }
+        else
+        {
+            jatuh();
+        }
     }
-    else{
-        fall();
+    
+    public boolean dipapan()
+    {
+        Actor bawah = getOneObjectAtOffset(0, getHeight() / 2, Papan.class);
+        return bawah !=null;
     }
-}
 
-public boolean onpapan()
-{
-    Actor under = grtOneObjectAtOffset(0,getHeight()/2,Papan.class);
-    return under !=null;
-}
+    public void jatuh()
+    {
+        setLocation(getX(), getY() + vSpeed);
+        vKecepatan = vKecepatan + akselerasi;
+    }
 
-public void fall()
-{
-    setLocation ( getX(), getY() + vSpeed);
-    vSpeed = vSpeed + acceleration;
-}
+    public void gerakKanan()
+    {
+        setLocation (getX() + speed, getY());
+    }
 
-public void moveRight()
-{
-    setLocation ( getX() + speed, getY( ));
-}
-
-public void moveLeft()
-{
-    setLocation ( getX() - speed, getY());
-}
+    public void gerakKiri()
+    {
+        setLocation (getX() - speed, getY());
+    }
 }

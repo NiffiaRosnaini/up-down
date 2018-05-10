@@ -8,16 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ta extends World
 {
-    public int jeda=50;
+    public int jeda = 50;
     /**
      * Constructor for objects of class ta.
      * 
      */
     public ta()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+    {
         super(600, 400, 1); 
     }
+    
     public void act()
     {
         if(jeda==0){
