@@ -31,7 +31,7 @@ public class Awan extends World
         
         addObject(new ground(), 56,317);
         addObject(new doodler(false), 56, 200);
-        setPaintOrder(scoreKeeper.class,doodler.class,ground.class, ammo.class);
+        setPaintOrder(skor.class,awanGround.class,ground.class, ammo.class);
         setBackground("title.png");
         getBackground().setTransparency(255);
         one = true;
