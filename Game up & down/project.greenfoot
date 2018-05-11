@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Fri May 11 11:19:35 KST 2018
+#Fri May 11 10:07:46 KST 2018
 target4.type=ClassTarget
 dependency3.from=Bola
 target3.height=50
@@ -39,8 +39,8 @@ target7.showInterface=false
 target1.showInterface=false
 class.peluru.image=ammo.png
 target5.showInterface=false
-target6.width=80
 target7.type=ClassTarget
+target6.width=80
 target6.height=50
 package.numTargets=7
 class.awanGround.superclass=greenfoot.Actor
