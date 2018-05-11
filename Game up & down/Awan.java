@@ -11,6 +11,13 @@ public class Awan extends World
     boolean bstarted, started = false;
     boolean once;
     int transparency = 0;
+    int scrollSpeed;
+    boolean scroll;
+    boolean fall;
+    boolean ended;
+    boolean killed;
+    int height = 0;
+    int doodleX;
     
     /**
      * Constructor for objects of class Awan.
@@ -20,5 +27,91 @@ public class Awan extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        
+        addObject(new ground(), 56,317);
+        addObject(new doodler(false), 56, 200);
+        setPaintOrder(scoreKeeper.class,doodler.class,ground.class, ammo.class);
+        setBackground("title.png");
+        getBackground().setTransparency(255);
+        one = true;
+        started = false;
+        height = 0;
+        fall = false;
+        ended = false;
+        killed = false;
+    }
+    
+    public void act()
+    {
+        
+        
+{ if (Greenfoot.getRandomNumber(1000) > 998 & started==true)
+            {
+                int x = Greenfoot.getRandomNumber(300);
+                int y = Greenfoot.getRandomNumber(150);
+                addObject(new monsterr(), x, y);
+            }
+        }
+{ if (Greenfoot.getRandomNumber(1000) > 998 & started==true)
+                {
+                    int x = Greenfoot.getRandomNumber(300);
+                    int y = Greenfoot.getRandomNumber(150);
+                    addObject(new monstrl(), x, y);
+                }
+        }
+        
+if(bStarted==false & Greenfoot.mouseMoved(this))
+            {
+                bStarted = true;
+            }   
+            
+if(started==false & bStarted==true)
+{
+  MouseInfo mouse = Greenfoot.getMouseinfo();
+        
+  if(Grenfoot.mouse.Clicked(this))
+  {
+     if(mouse.getX()>=50 & mouse.getX()<=145
+     && mouse.getY()>=150 & mouse.getY()<=230)
+    {
+        started =true;
+    }
+   }
+}
+
+if(started==true & once ==true)
+{
+    setBackground("paper.png");
+    cleanup();
+    once = false;
+    setLevel(1);
+}
+if(fall)
+{
+    end();
+}
+if(killed)
+{
+    end();
+}
+}
+
+public void cleanup()
+{
+    removeObjects(getObjects(doodler.class));
+    removeObjects(getObjects(ground.class));
+}
+
+public void setLevel1(int level)
+{
+    switch(level)
+    {
+        case 1: gamePlay(); break;
     }
 }
+}
+    
+
+
+
+
