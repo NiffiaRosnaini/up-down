@@ -19,6 +19,6 @@ public class petunjuk extends Actor
      */
     public void act() 
     {
-        setLocation(((BolaWorld) getWorld()).BolaX, 20);
+        setLocation(((Awan) getWorld()).AwanX, 20);
     }    
 }
