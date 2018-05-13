@@ -61,10 +61,11 @@ public class Bola extends Actor
         
         if(canMove & y < 400)
             scrollUp();
+            
         if(y>400)
             fall();
             
-        ((BolaWorld) getWorld()).height = hits;
+        ((Awan) getWorld()).height = hits;
         
         scout();   
     }
@@ -84,8 +85,8 @@ public class Bola extends Actor
             {
                 Ground.hasBeenBounced=true;
                 {
-                    getWorld().addObject(new awanGround(), Greenfoot.getRandoNumber(300), 0);
-                    getWorld().addObject(new awanGround(), Greenfoot.getRandoNumber(300), 70);
+                    getWorld().addObject(new awanGround(), Greenfoot.getRandomNumber(300), 0);
+                    getWorld().addObject(new awanGround(), Greenfoot.getRandomNumber(300), 70);
                 }
             }
         }
@@ -128,29 +129,29 @@ public class Bola extends Actor
     
     public void scollUp()
     {
-        if(y<=200 & Y>100)
+        if(y<=200 & y>100)
         {
-            ((BolaWorld) getWorld()).scrollSpeed = (int) -ys;
-            ((BolaWorld) getWorld()).scroll = true;
+            ((Awan) getWorld()).scrollSpeed = (int) -ys;
+            ((Awan) getWorld()).scroll = true;
             hits++;
         }
         else
         {
-            ((BolaWorld) getWorld()).scroll = false;
+            ((Awan) getWorld()).scroll = false;
         }
     }
     
     public void fall()
     {
-        ((BolaWorld) getWorld()).fall = true;
-        ((BolaWorld) getWorld()).scrollSpeed = (int) -ys;
+        ((Awan) getWorld()).fall = true;
+        ((Awan) getWorld()).scrollSpeed = (int) -ys;
     }
     
     public void scount()
     {
         if(y<0 & getWorld().getObjects(petunjuk.class).isEmpty())
         {
-            getWorld().addObject(new petujuk(), getX(), 20);
+            getWorld().addObject(new petunjuk(), getX(), 20);
         }
         if(y>0 & !getWorld().getObjects(petunjuk.class).isEmpty())
         {
