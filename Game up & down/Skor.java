@@ -22,7 +22,7 @@ public class Skor extends Actor
     {
         // Add your action code here.
         gambar.clear();
-        gambar.drawString(((Awan)getWorld()).height() + "skor  ",10,10);
+        gambar.drawString(((Awan)getWorld()).height + "skor  ",10,10);
         setImage(gambar);
     }    
 }

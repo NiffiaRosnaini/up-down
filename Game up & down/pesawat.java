@@ -14,6 +14,32 @@ public class pesawat extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        lookBola();
+        kill();
     }    
+    
+    public void lookBola()
+    {
+        if(isTouching(Bola.class))
+        {
+            removeTouching(Bola.class);
+            killed();
+        }
+       else{
+           move (1);
+        }
+    }
+    
+    public void killed()
+    {
+        ((Awan) getWorld()).killed = true;
+    }
+    public void kill()
+    {
+        int x = getX();
+        if(x==getWorld().getWidth()-1)
+        {
+            Actor pesawat = getOneObjectAtOffset(0, 0,pesawat.class);
+        }
+    }
 }
