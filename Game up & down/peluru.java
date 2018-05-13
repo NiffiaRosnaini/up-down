@@ -31,3 +31,33 @@ public class peluru extends Actor
         Actor monstr = getOneObjectAtOffset(0, 0, monstr.class);
         return monstr != null;
     }
+    public boolean foundMonstrl()
+    {
+        Actor monstrl = getOneObjectAtOffset(0, 0, monstrl.class);
+        return monstrl != null;
+    }
+    public void killl(){
+        Actot monstrl = getOneObjectAtOffset(0, 0, monstrl.class);
+        if (monstrl != null) {
+            getWorld().removeObject(monstrl);
+        }
+    }
+    public void kill()
+    {
+        Actor monstr = getOneObjectAtOffset(0, 0, monstr.class);
+        getWorld().removeObeject(monstr);
+    }
+    public void move()
+    {
+        if(getY()<=0)
+        {
+            removed = true;
+            getWorld().removedObject(this);
+            return;
+        }
+        setLocation(getX(), getY()-10);
+    }
+}
+   
+
+   
