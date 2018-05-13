@@ -8,12 +8,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class peluru extends Actor
 {
-    /**
-     * Act - do whatever the peluru wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
+    boolean removed;
+    public peluru() 
     {
-        // Add your action code here.
-    }    
-}
+        removed = false;
+    }     
+    public void act()
+    { if (foundMonstr()){
+            kill();
+       }
+      if (foundMonstr()){
+            killl();
+        }
+      if (removed) {
+            return;
+        }
+        
+        move();
+    }
+    public boolean foundMonstr()
+    {
+        Actor monstr = getOneObjectAtOffset(0, 0, monstr.class);
+        return monstr != null;
+    }
