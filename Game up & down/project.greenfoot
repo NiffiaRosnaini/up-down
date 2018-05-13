@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sun May 13 11:52:35 KST 2018
+#Sun May 13 12:28:31 KST 2018
 dependency9.type=UsesDependency
 target4.type=ClassTarget
 dependency3.from=Awan
@@ -10,11 +10,14 @@ readme.y=10
 dependency3.type=UsesDependency
 readme.x=10
 dependency10.to=petunjuk
+dependency12.from=awanGround
 target4.name=Awan
 class.Skor.superclass=greenfoot.Actor
 dependency11.to=Awan
 target4.typeParameters=
+dependency12.type=UsesDependency
 readme.width=47
+dependency12.to=Awan
 editor.fx.0.width=728
 target1.height=50
 target5.type=ClassTarget
@@ -89,8 +92,8 @@ dependency1.from=petunjuk
 target5.width=80
 class.pesawat.image=airplane.png
 target1.y=0
-editor.fx.0.height=739
 target1.x=0
+editor.fx.0.height=739
 dependency1.type=UsesDependency
 readme.height=58
 class.pesawat.superclass=greenfoot.Actor
@@ -98,7 +101,7 @@ class.peluru.superclass=greenfoot.Actor
 dependency10.from=Bola
 target2.name=pesawat
 readme.name=@README
-package.numDependencies=11
+package.numDependencies=12
 dependency10.type=UsesDependency
 dependency8.from=Bola
 class.petunjuk.superclass=greenfoot.Actor
