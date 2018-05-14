@@ -31,7 +31,7 @@ public class Awan extends World
         addObject(new awanGround(), 56,317);
         addObject(new Bola(false), 56, 200);
         setPaintOrder(Skor.class, Bola.class, awanGround.class, peluru.class);
-        setBackground("title.png");
+        setBackground("n.jpg");
         getBackground().setTransparency(255);
         once = true;
         started = false;
@@ -43,20 +43,19 @@ public class Awan extends World
     
     public void act()
     {
-        
-        
-        { if (Greenfoot.getRandomNumber(1000) > 998 & started==true)
+        {if (Greenfoot.getRandomNumber(1000) > 998 & started==true)
             {
                 int x = Greenfoot.getRandomNumber(300);
                 int y = Greenfoot.getRandomNumber(150);
                 addObject(new pesawat(), x, y);
+            }
         }
-    }
-        
-        if(bStarted==false & Greenfoot.mouseMoved(this))
-        {
-            bStarted = true;
-        }   
+               
+        {if(bStarted==false & Greenfoot.mouseMoved(this))
+            {
+                bStarted = true;
+            }
+        }
             
         if(started==false & bStarted==true)
         {
@@ -74,15 +73,17 @@ public class Awan extends World
 
         if(started==true & once ==true)
         {
-            setBackground("paper.png");
+            setBackground("n.jpg");
             cleanup();
             once = false;
-            setLevel(1);
+            setLevel1(1);
         }
+        
         if(fall)
         {
             end();
         }
+        
         if(killed)
         {
             end();
@@ -105,7 +106,7 @@ public class Awan extends World
     
     public void gamePlay()
     {
-        addObject(new Bola(),getWidth()/2, 300);
+        addObject(new Bola(true), getWidth()/2, 300);
         addObject(new awanGround(false), 28, 391);
         addObject(new awanGround(false), 83, 391);
         addObject(new awanGround(false), 83+55, 391);
@@ -127,7 +128,7 @@ public class Awan extends World
         addObject(new awanGround(), 56, 317);
         addObject(new Bola(false), 56, 200);
         
-        setBackground("title.png");
+        setBackground("n.jpg");
         getBackground().setTransparency(255);
         once = true;
         started = false;

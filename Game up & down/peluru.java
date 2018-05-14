@@ -14,39 +14,27 @@ public class peluru extends Actor
         removed = false;
     }
     public void act() 
-    { if (foundMonstr()) {
+    { if (foundPesawat()) {
             kill();
         }
-      if (foundMonstr1()) {
-            kill1();
-        }
+      
       if(removed){
            return;
         }
       
       move();
     }  
-    public boolean foundMonstr()
+    public boolean foundPesawat()
     {
-        Actor monstr = getOneObjectAtOffset(0, 0, monstr.class);
-        return monstr != null;
+        Actor pesawat = getOneObjectAtOffset(0, 0, pesawat.class);
+        return pesawat != null;
     }
-    public boolean foundMonstr1()
-    {
-        Actor monstr1 = getOneObjectAtOffset(0, 0, monstr1.class);
-        return monstr1 != null;
-    }
-    public void kill1(){
-        Actor monstr1 = getOneObjectAtOffset(0, 0, monstr1.class);
-        if (monstr1 != null) {
-            getWorld().removeObject(monstr1);
-        }
-    }
+  
     public void kill()
     {
-        Actor monstr = getOneObjectAtOffset(0, 0, monstr.class);
-        if (monstr != null) {
-            getWorld().removeObject(monstr);
+        Actor pesawat = getOneObjectAtOffset(0, 0, pesawat.class);
+        if (pesawat != null) {
+            getWorld().removeObject(pesawat);
         } 
     }
     public void move()

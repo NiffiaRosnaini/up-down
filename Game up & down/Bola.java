@@ -11,9 +11,9 @@ public class Bola extends Actor
     float ys,xs;
     int x,y;
     boolean canMove;
-    GreenfootImage left = new GreenfootImage("Ball.png");
-    GreenfootImage right = new GreenfootImage("Ball.png");
-    GreenfootImage shooting = new GreenfootImage("shooting.png");
+    GreenfootImage left = new GreenfootImage("ball.png");
+    GreenfootImage right = new GreenfootImage("ball.png");
+    GreenfootImage shooting = new GreenfootImage("ball 2.png");
     awanGround Ground = new awanGround();
     int srollSpeed;
     int hits = 0;
@@ -127,7 +127,7 @@ public class Bola extends Actor
         }
     }
     
-    public void scollUp()
+    public void scrollUp()
     {
         if(y<=200 & y>100)
         {
@@ -147,7 +147,7 @@ public class Bola extends Actor
         ((Awan) getWorld()).scrollSpeed = (int) -ys;
     }
     
-    public void scount()
+    public void scout()
     {
         if(y<0 & getWorld().getObjects(petunjuk.class).isEmpty())
         {
@@ -155,7 +155,7 @@ public class Bola extends Actor
         }
         if(y>0 & !getWorld().getObjects(petunjuk.class).isEmpty())
         {
-            getWorld().removeObject(getWorld().getObjects(petunjuk.class));
+            getWorld().removeObjects(getWorld().getObjects(petunjuk.class));
         }
     }
 }
