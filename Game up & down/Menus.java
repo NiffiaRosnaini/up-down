@@ -15,5 +15,6 @@ public class Menus extends Menu
      */
     public Menus()
     {
+        super();
     }
 }

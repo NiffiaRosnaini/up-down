@@ -14,6 +14,7 @@ public class start extends button
      */
     public void act() 
     {
-        // Add your action code here.
+       super.act(this.getClass().getName());
+         Menus.titleSound.playLoop();
     }    
 }

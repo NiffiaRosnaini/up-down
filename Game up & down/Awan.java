@@ -31,7 +31,7 @@ public class Awan extends World
         addObject(new awanGround(), 56,317);
         addObject(new Bola(false), 56, 200);
         setPaintOrder(Skor.class, Bola.class, awanGround.class, peluru.class);
-        setBackground("bg.png");
+        setBackground("background.png");
         getBackground().setTransparency(255);
         once = true;
         started = false;
