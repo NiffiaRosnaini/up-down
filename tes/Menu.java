@@ -14,23 +14,19 @@ public class Menu extends World
      * 
      */
     public static GreenfootSound titleSound;
-    
     public Menu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(300, 400, 1,false); 
         if (this.getClass().getName().equalsIgnoreCase("Menus"))
         {
                 addObject(new start(), 550,350);
                 addObject(new exit(), 120,300);
-                tittleSound = new GreenfotSound("fix.mp3");
-                        titleSound.stop();
+                    titleSound = new GreenfootSound("open1.mp3");
+                     titleSound.stop();
           titleSound.setVolume(50);
           titleSound.playLoop();
-        }
-        else
-        {
-            addObject(new back(), 100, 500);
+         
         }
     }
 }
