@@ -14,6 +14,6 @@ public class exit extends button
      */
     public void act() 
     {
-        // Add your action code here.
+        super.act(this.getClass().getName());
     }    
 }
