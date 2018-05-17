@@ -31,7 +31,7 @@ public class Awan extends World
         addObject(new awanGround(), 56,317);
         addObject(new Bola(false), 56, 200);
         setPaintOrder(Skor.class, Bola.class, awanGround.class, peluru.class);
-        setBackground("background.png");
+        setBackground("bg.png");
         getBackground().setTransparency(255);
         once = true;
         started = false;
@@ -103,12 +103,7 @@ public class Awan extends World
             case 1: gamePlay(); break;
         }
     }
-    
-    public void play()
-    {
-        
-    }
-    
+
     public void gamePlay()
     {
         addObject(new Bola(true), getWidth()/2, 300);
@@ -133,7 +128,7 @@ public class Awan extends World
         addObject(new awanGround(), 56, 317);
         addObject(new Bola(false), 56, 200);
         
-        setBackground("bg.png");
+        setBackground("game over.png");
         getBackground().setTransparency(255);
         once = true;
         started = false;
