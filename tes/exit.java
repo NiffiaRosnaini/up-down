@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class exit extends button
+public class exit extends Actor
 {
     /**
      * Act - do whatever the exit wants to do. This method is called whenever

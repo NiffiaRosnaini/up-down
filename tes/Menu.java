@@ -18,10 +18,10 @@ public class Menu extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(300, 400, 1,false); 
+        addObject(new play(), 265,370);
+        addObject(new exit(), 35,370);
         if (this.getClass().getName().equalsIgnoreCase("Menus"))
         {
-                addObject(new start(), 550,350);
-                addObject(new exit(), 120,300);
                     titleSound = new GreenfootSound("open1.mp3");
                      titleSound.stop();
           titleSound.setVolume(50);
