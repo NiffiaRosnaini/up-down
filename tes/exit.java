@@ -14,6 +14,9 @@ public class exit extends Actor
      */
     public void act() 
     {
-       
+        if (Greenfoot.mousePressed(this))
+        {
+            System.exit(0);
+        }
     }    
 }
