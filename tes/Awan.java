@@ -26,7 +26,7 @@ public class Awan extends World
     public Awan()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(300, 400, 1, false); 
+        super(300, 400, 1, false);
         
         addObject(new awanGround(), 56,317);
         addObject(new Bola(false), 56, 200);
@@ -43,24 +43,28 @@ public class Awan extends World
     
     public void act()
     {
-        {if (Greenfoot.getRandomNumber(1000) > 998 & started==true)
+        if (Greenfoot.getRandomNumber(1000) > 998 & started==true)
             {
                 int x = Greenfoot.getRandomNumber(300);
                 int y = Greenfoot.getRandomNumber(150);
                 addObject(new pesawat(), x, y);
             }
-        }
+        if (Greenfoot.getRandomNumber(1000) > 998 & started==true)
+            {
+                int x = Greenfoot.getRandomNumber(300);
+                int y = Greenfoot.getRandomNumber(150);
+                addObject(new pesawat(), x, y);//nanti dgnti
+            }
                
-        {if(bStarted==false & Greenfoot.mouseMoved(this))
+        if(bStarted==false & Greenfoot.mouseMoved(this))
             {
                 bStarted = true;
             }
-        }
+        
             
         if(started==false & bStarted==true)
         {
-            MouseInfo mouse = Greenfoot.getMouseInfo();
-        
+            MouseInfo mouse = Greenfoot.getMouseInfo();    
             if(Greenfoot.mouseClicked(this))
             {
                 if(mouse.getX()>=50 & mouse.getX()<=145
@@ -128,7 +132,7 @@ public class Awan extends World
         addObject(new awanGround(), 56, 317);
         addObject(new Bola(false), 56, 200);
         
-        setBackground("game over.png");
+        setBackground("game over.jpg");
         getBackground().setTransparency(255);
         once = true;
         started = false;
@@ -138,4 +142,3 @@ public class Awan extends World
         ended = false;
     }
 }
-

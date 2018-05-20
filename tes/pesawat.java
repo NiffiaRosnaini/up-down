@@ -12,6 +12,12 @@ public class pesawat extends Actor
      * Act - do whatever the pesawat wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public pesawat()
+    {
+        GreenfootImage image = getImage();
+        image.scale(image.getWidth() - 150,image.getHeight()-200);
+        setImage(image);
+    }
     public void act() 
     {
         lookBola();

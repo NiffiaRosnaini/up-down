@@ -117,7 +117,7 @@ public class Bola extends Actor
     
     public void wrapAround()
     {
-        if(x>30)
+        if(x>300)
         {
             setLocation(0,getY());
         }
@@ -132,6 +132,12 @@ public class Bola extends Actor
         if(y<=200 & y>100)
         {
             ((Awan) getWorld()).scrollSpeed = (int) -ys;
+            ((Awan) getWorld()).scroll = true;
+            hits++;
+        }
+        else if(y<=100)
+        {
+            ((Awan) getWorld()).scrollSpeed = (int) -ys*2;
             ((Awan) getWorld()).scroll = true;
             hits++;
         }
