@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon May 21 12:18:37 SGT 2018
+#Sun May 20 10:43:39 SGT 2018
 editor.fx.0.height=739
 target2.width=80
 target8.name=Skor
@@ -107,6 +107,7 @@ dependency2.to=Awan
 target11.name=awanGround
 dependency14.type=UsesDependency
 target9.y=0
+class.exit.superclass=greenfoot.Actor
 target9.x=0
 class.peluru.superclass=greenfoot.Actor
 target3.type=ClassTarget
@@ -121,6 +122,7 @@ target5.x=0
 dependency4.type=UsesDependency
 target7.type=ClassTarget
 target10.width=90
+class.exit.image=exit2.jpg
 target3.y=0
 target3.x=0
 target11.width=90
@@ -130,6 +132,7 @@ target3.height=50
 dependency8.type=UsesDependency
 target1.y=0
 target1.x=0
+class.playagain.image=playagain.png
 class.play.superclass=greenfoot.Actor
 target5.typeParameters=
 dependency17.to=petunjuk
