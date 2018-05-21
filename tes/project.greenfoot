@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sun May 20 10:43:39 SGT 2018
+#Mon May 21 17:29:19 KST 2018
 editor.fx.0.height=739
 target2.width=80
 target8.name=Skor
@@ -122,7 +122,7 @@ target5.x=0
 dependency4.type=UsesDependency
 target7.type=ClassTarget
 target10.width=90
-class.exit.image=exit2.jpg
+class.exit.image=exit.png
 target3.y=0
 target3.x=0
 target11.width=90
