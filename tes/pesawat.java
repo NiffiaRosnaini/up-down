@@ -15,7 +15,7 @@ public class pesawat extends Actor
     public pesawat()
     {
         GreenfootImage image = getImage();
-        image.scale(image.getWidth() - 150,image.getHeight()-200);
+        image.scale(image.getWidth() - 150,image.getHeight()-100);
         setImage(image);
     }
     public void act() 
