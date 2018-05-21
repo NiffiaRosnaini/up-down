@@ -14,6 +14,9 @@ public class playagain extends Actor
      */
     public void act() 
     {
-      playagain playagain = new playagain();
+       if (Greenfoot.mousePressed(this) )
+       {
+           Greenfoot.setWorld(new Awan());
+        }
     }    
 }
