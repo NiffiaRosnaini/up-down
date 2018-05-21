@@ -12,9 +12,15 @@ public class playagain extends Actor
      * Act - do whatever the playagain wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public playagain()
+    {
+        GreenfootImage image = getImage();
+        image.scale(image.getWidth() - 130,image.getHeight()-100);
+        setImage(image);
+    }
     public void act() 
     {
-       if (Greenfoot.mousePressed(this) )
+       if (Greenfoot.mouseClicked(this) )
        {
            Greenfoot.setWorld(new Awan());
         }

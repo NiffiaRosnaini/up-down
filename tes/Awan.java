@@ -121,7 +121,7 @@ public class Awan extends World
         addObject(new awanGround(), Greenfoot.getRandomNumber(300), 250);
         addObject(new awanGround(), Greenfoot.getRandomNumber(300), 150);
         addObject(new awanGround(), Greenfoot.getRandomNumber(300), 50);
-        addObject(new Skor(), 253,385);
+        addObject(new Skor(), 270,10);
     }
     
     public void end()

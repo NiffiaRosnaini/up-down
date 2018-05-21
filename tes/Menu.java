@@ -19,9 +19,9 @@ public class Menu extends World
         super(300, 400, 1,false); 
         addObject(new play(), 150,350);
         
-        if (this.getClass().getName().equalsIgnoreCase("Menus"))
+        if (this.getClass().getName().equalsIgnoreCase("Menu"))
         {
-                    titleSound = new GreenfootSound("open1.mp3");
+                    titleSound = new GreenfootSound(".mp3");
                      titleSound.stop();
           titleSound.setVolume(50);
           titleSound.playLoop();
