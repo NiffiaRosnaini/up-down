@@ -29,7 +29,7 @@ public class Awan extends World
         super(300, 400, 1, false);
         
         addObject(new awanGround(), 56,317);
-        addObject(new Bola(false), 56, 200);
+        addObject(new Bola(false), 56, 2000);
         setPaintOrder(Skor.class, Bola.class, awanGround.class, peluru.class);
         setBackground("bg.png");
         getBackground().setTransparency(255);
@@ -49,12 +49,12 @@ public class Awan extends World
                 int y = Greenfoot.getRandomNumber(150);
                 addObject(new pesawat(), x, y);
             }
-        if (Greenfoot.getRandomNumber(1000) > 998 & started==true)
+        /**if (Greenfoot.getRandomNumber(1000) > 998 & started==true)
             {
                 int x = Greenfoot.getRandomNumber(300);
                 int y = Greenfoot.getRandomNumber(150);
                 addObject(new pesawat(), x, y);//nanti dgnti
-            }
+            }*/
                
         if(bStarted==false & Greenfoot.mouseMoved(this))
             {
